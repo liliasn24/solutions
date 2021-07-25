@@ -8,9 +8,8 @@
 // Return returns the value of function
 // console log prints whatever you tell it to print.
 
+
 // Palindrome
-
-
 const checkPalindrome = (str) => {
   let length = str.length;
   let start = str.substring(0, Math.floor(length / 2)).toLowerCase();
@@ -22,3 +21,15 @@ const checkPalindrome = (str) => {
 
 console.log(checkPalindrome('Radar'));
 console.log(checkPalindrome("Borscht"));
+
+
+// Sum Array
+const sumArray = (arr) => {
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    sum += arr[i];
+  }
+    console.log(sum)
+}
+
+// console.log(sumArray([1, 2, 3, 4, 5, 6])); I couldnt get this to work when calling the function, but I'm gettim the sum af the numbers in the array.
