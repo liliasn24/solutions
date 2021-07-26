@@ -62,3 +62,57 @@ let printPrime = (num) => {
 }
 
 printPrime(100);
+
+
+// Rock paper scissors
+
+const choices = ["rock", "paper", "scissors"];
+
+function randomMove(){
+  let randomIndex = Math.floor(Math.random() * choices.length);
+  let selection;
+  if (randomIndex === 0){
+    selection = "rock"
+  } else if (randomIndex === 1) {
+    selection = "paper"
+  } else {
+    selection = "scissors"
+  }
+  return selection;
+// console.log(randomIndex)
+// console.log(selection)
+}
+// console.log(randomMove());
+
+let computerMove = randomMove();
+console.log(computerMove);
+
+let userMove = randomMove();
+console.log(userMove);
+
+
+function rockPaperScissors(computerMove, userMove){
+  if(computerMove === userMove){
+    console.log("It's a tie! The computer and user both chose " + userMove);
+  }else if(computerMove === "rock"){
+    if(userMove === "paper"){
+      console.log("The user wins! The computer chose " + computerMove + " and the user chose " + userMove);
+    }else{
+      console.log("The computer wins! The computer chose " + computerMove + " and the user chose " + userMove);
+    }
+  }else if(computerMove === "paper"){
+    if(userMove === "scissors"){
+      console.log("The player wins! The computer chose " + computerMove + " and the user chose " + userMove);
+    }else{
+      console.log("The computer wins! The computer chose " + computerMove + " and the user chose " + userMove);
+    }
+  }else if(computerMove === "scissors"){
+    if(userMove === "rock"){
+      console.log("The player wins! The computer chose " + computerMove + " and the user chose " + userMove);
+    }else{
+      console.log("The computer wins! The computer chose " + computerMove + " and the user chose " + userMove);
+    }
+  }
+}
+
+rockPaperScissors(computerMove, userMove);
